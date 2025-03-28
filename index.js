@@ -1,7 +1,8 @@
 const express = require('express');
+
 const jwt = require('jsonwebtoken');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the Vercel assigned port
 require('dotenv').config();  // This loads the .env file
 
 // Secret key to sign JWTs (in a real app, store this securely)
